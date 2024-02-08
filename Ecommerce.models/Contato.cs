@@ -10,8 +10,8 @@ namespace Ecommerce.models
     {
         public int ID { get; set; }
         public int UsuarioID  { get; set; }
-        public string? Telefone { get; set; }
-        public string? Celular { get; set;}
+        public string? Telefone { get; set; } = null!;
+        public string? Celular { get; set; } = null!;
         public Usuario? Usuario { get; set; }
     }
 }

@@ -10,14 +10,14 @@ namespace Ecommerce.models
     {
         public int Id { get; set; }
         public int UsuarioID { get; set; }
-        public string? NomeEndereco { get; set; }//apelido do usuário para o endereco, casa, trabalho etc
+        public string? NomeEndereco { get; set; } = null!;//apelido do usuário para o endereco, casa, trabalho etc
         public string? CEP { get; set; }
         public string? Estado { get; set; }
         public string? Cidade { get; set; }
         public string? Bairro { get; set; }
         public string? Endereco { get; set; }
-        public string? Numero { get; set; }
-        public string? Complemento { get; set; }
+        public string? Numero { get; set; } = null!;
+        public string? Complemento { get; set; } = null!;
         public Usuario? Usuario { get; set;}
 
     }
