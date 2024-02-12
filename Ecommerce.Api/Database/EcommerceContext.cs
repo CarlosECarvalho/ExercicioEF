@@ -1,11 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System.Security.Cryptography.X509Certificates;
 
 namespace Ecommerce.Api.Database
 {
     public class EcommerceContext : DbContext
     {
-        public EcommerceContext(DbContextOptions<EcommerceContext> options) : base(options) { }
+        public EcommerceContext(DbContextOptions<EcommerceContext> options) : base(options) 
+        { 
+        }
 
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Contato> Contatos { get; set; }
