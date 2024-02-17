@@ -4,6 +4,7 @@ using Ecommerce.Api.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Ecommerce.Api.Migrations
 {
     [DbContext(typeof(EcommerceContext))]
-    partial class EcommerceContextModelSnapshot : ModelSnapshot
+    [Migration("20240212174750_AddColumNomePai")]
+    partial class AddColumNomePai
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -77,78 +79,6 @@ namespace Ecommerce.Api.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Departamentos");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Nome = "Vendas"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Nome = "Compras"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Nome = "Logistica"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Nome = "TI"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Nome = "RH"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Nome = "Produção"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Nome = "Financeiro"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Nome = "Marketing"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Nome = "Juridico"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            Nome = "Qualidade"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            Nome = "Manutenção"
-                        },
-                        new
-                        {
-                            Id = 12,
-                            Nome = "Segurança"
-                        },
-                        new
-                        {
-                            Id = 13,
-                            Nome = "Engenharia"
-                        },
-                        new
-                        {
-                            Id = 14,
-                            Nome = "Administração"
-                        });
                 });
 
             modelBuilder.Entity("Ecommerce.models.EnderecoEntrega", b =>
