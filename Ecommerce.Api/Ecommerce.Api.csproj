@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Ecommerce.models\Ecommerce.models.csproj" />
+    <ProjectReference Include="..\eCommerce.Models.DataAnnotations\Ecommerce.models.DataAnnotations.csproj" />
   </ItemGroup>
 
 </Project>
