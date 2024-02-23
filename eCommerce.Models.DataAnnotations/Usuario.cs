@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -27,10 +28,13 @@ namespace Ecommerce.models
     public class Usuario
     {
         #region DadosUsuario
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
         public string Nome { get; set; } = null!;
         public string Email { get; set; } = null!;
-        public string? Genero { get; set;}
+        [Required]
+        [MaxLength(20)]
+        public string Genero { get; set;}
         [Column("CIN")]
         public string? RG { get; set; }
         public string CPF { get; set; } = null!;
